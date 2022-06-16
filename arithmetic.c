@@ -70,12 +70,12 @@ void mul(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * div - divides the second top element of the stack by the top element
+ * divi - divides the second top element of the stack by the top element
  * @stack: stack
  * @line_number: line number
  */
 
-void div(stack_t **stack, unsigned int line_number)
+void divi(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = NULL;
 	int quotient = 0;

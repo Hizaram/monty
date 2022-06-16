@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "main.h"
 
 /**
  * is_number - checks to see if input is a number

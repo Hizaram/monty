@@ -111,7 +111,7 @@ void get_function(char *op, stack_t **stack, unsigned int line_number)
 		{"add", add},
 		{"swap", swap},
 		{"sub", sub},
-		{"div", div},
+		{"div", divi},
 		{"mul", mul},
 		{NULL, NULL}
 	};
