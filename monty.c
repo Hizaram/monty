@@ -33,7 +33,8 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			while ((bytes_read = getline(&line, &len, fp)) != -1)
+			bytes_read = getline(&line, &len, fp);
+			while (bytes_read != -1)
 			{
 				line_number++;
 				token = get_token(line, line_number);
