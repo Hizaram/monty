@@ -33,13 +33,12 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			bytes_read = getline(&line, &len, fp);
-			while (bytes_read != -1)
+			while ((bytes_read = getline(&line, &len, fp)) != -1)
 			{
 				line_number++;
 				token = get_token(line, line_number);
 				if (token != NULL)
-					get_func(token, &head, line_number);
+					get_function(token, &head, line_number);
 			}
 			free(line);
 			free_stack(head);
