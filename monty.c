@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 				line_number++;
 				token = get_token(line, line_number);
 				if (token != NULL)
-					get_function(token, &head, line_number);
+					get_func(token, &head, line_number);
 			}
 			free(line);
 			free_stack(head);

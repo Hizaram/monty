@@ -92,7 +92,7 @@ void pop(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * get_function - matches opcode from input to existing opcode in struct
+ * get_func - matches opcode from input to existing opcode in struct
  * @op: character to check
  * @stack: stack
  * @line_number: line number
@@ -100,7 +100,7 @@ void pop(stack_t **stack, unsigned int line_number)
  * Return: the pointer to the appropriate function or NULL if nothing matches
  */
 
-void get_function(char *op, stack_t **stack, unsigned int line_number)
+void get_func(char *op, stack_t **stack, unsigned int line_number)
 {
 	instruction_t find_op[] = {
 		{"push", push},
