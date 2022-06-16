@@ -8,7 +8,6 @@
 
 void push(stack_t **stack, unsigned int line_number)
 {
-	int global_var;
 	stack_t *new = NULL;
 
 	(void) line_number;

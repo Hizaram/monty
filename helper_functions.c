@@ -37,7 +37,6 @@ int is_number(char *s)
 
 char *get_token(char *line, unsigned int line_number)
 {
-	int global_var;
 	char delim[2] = "\n ";
 	char *token = NULL;
 	char *holder = NULL;
