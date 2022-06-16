@@ -14,7 +14,7 @@ void add(stack_t **stack, unsigned int line_number)
 	temp = *stack;
 	if (temp == NULL || temp->next == NULL)
 	{
-		printf("L%d: can't add, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	sum = temp->n + temp->next->n;
@@ -37,7 +37,7 @@ void sub(stack_t **stack, unsigned int line_number)
 	temp = *stack;
 	if (temp == NULL || temp->next == NULL)
 	{
-		printf("L%d: can't sub, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	diff = temp->next->n - temp->n;
@@ -60,7 +60,7 @@ void mul(stack_t **stack, unsigned int line_number)
 	temp = *stack;
 	if (temp == NULL || temp->next == NULL)
 	{
-		printf("L%d: can't mul, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	factor = temp->next->n * temp->n;
@@ -83,12 +83,12 @@ void divi(stack_t **stack, unsigned int line_number)
 	temp = *stack;
 	if (temp == NULL || temp->next == NULL)
 	{
-		printf("L%d: can't div, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	if (temp->n == 0)
 	{
-		printf("L%d: division by zero\n", line_number);
+		fprintf(stderr, "L%d: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	quotient = temp->next->n / temp->n;

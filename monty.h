@@ -54,6 +54,8 @@ void pop(stack_t **stack, unsigned int line_number);
 /* MANDATORY FILES */
 void nop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
+void modd(stack_t **stack, unsigned int line_number);
+void comm(stack_t **stack, unsigned int line_number);
 
 /* ARITHMETIC FILES */
 void add(stack_t **stack, unsigned int line_number);

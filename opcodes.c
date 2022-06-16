@@ -14,7 +14,7 @@ void push(stack_t **stack, unsigned int line_number)
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
-		printf("Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 	new->n = global_var;
@@ -64,7 +64,7 @@ void pint(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || stack == NULL)
 	{
-		printf("L%d: can't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	temp = *stack;
@@ -83,7 +83,7 @@ void pop(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || stack == NULL)
 	{
-		printf("L%d: can't pop an empty stack\n", line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -116,6 +116,8 @@ void get_func(char *op, stack_t **stack, unsigned int line_number)
 		{"sub", sub},
 		{"div", divi},
 		{"mul", mul},
+		{"mod", modd},
+		{"#", comm},
 		{NULL, NULL}
 	};
 	int index = 0;
@@ -129,6 +131,6 @@ void get_func(char *op, stack_t **stack, unsigned int line_number)
 		}
 		index++;
 	}
-	printf("L%d: unknown instruction %s\n", line_number, op);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op);
 	exit(EXIT_FAILURE);
 }
