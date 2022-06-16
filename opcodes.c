@@ -57,17 +57,18 @@ void pall(stack_t **stack, unsigned int line_number)
  * @stack: stack
  * @line_number: line number
  */
+
 void pint(stack_t **stack, unsigned int line_number)
 {
-        stack_t *temp = NULL;
+	stack_t *temp = NULL;
 
-        if (*stack == NULL || stack == NULL)
-        {
-                printf("L%d: can't pint, stack empty\n", line_number);
-                exit(EXIT_FAILURE);
-        }
-        temp = *stack;
-        printf("%d\n", temp->n);
+	if (*stack == NULL || stack == NULL)
+	{
+		printf("L%d: can't pint, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	temp = *stack;
+	printf("%d\n", temp->n);
 }
 
 /**
@@ -75,20 +76,21 @@ void pint(stack_t **stack, unsigned int line_number)
  * @stack: stack
  * @line_number: line number
  */
+
 void pop(stack_t **stack, unsigned int line_number)
 {
-        stack_t *temp;
+	stack_t *temp;
 
-        if (*stack == NULL || stack == NULL)
-        {
-                printf("L%d: can't pop an empty stack\n", line_number);
-                exit(EXIT_FAILURE);
-        }
+	if (*stack == NULL || stack == NULL)
+	{
+		printf("L%d: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
-        temp = *stack;
-        *stack = temp->next;
-        if (*stack != NULL)
-                (*stack)->prev = NULL;
+	temp = *stack;
+	*stack = temp->next;
+	if (*stack != NULL)
+		(*stack)->prev = NULL;
 	free(temp);
 }
 
