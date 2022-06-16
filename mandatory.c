@@ -47,24 +47,24 @@ void swap(stack_t **stack, unsigned int line_number)
 
 void modd(stack_t **stack, unsigned int line_number)
 {
-        stack_t *temp = NULL;
-        int remainder = 0;
+	stack_t *temp = NULL;
+	int remainder = 0;
 
-        temp = *stack;
-        if (temp == NULL || temp->next == NULL)
-        {
-                fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
-                exit(EXIT_FAILURE);
-        }
-        if (temp->n == 0)
-        {
-                fprintf(stderr, "L%d: division by zero\n", line_number);
-                exit(EXIT_FAILURE);
-        }
-        remainder = temp->next->n % temp->n;
-        temp->next->n = remainder;
+	temp = *stack;
+	if (temp == NULL || temp->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	if (temp->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	remainder = temp->next->n % temp->n;
+	temp->next->n = remainder;
 
-        pop(stack, line_number);
+	pop(stack, line_number);
 }
 
 /**
@@ -74,6 +74,6 @@ void modd(stack_t **stack, unsigned int line_number)
  */
 void comm(stack_t **stack, unsigned int line_number)
 {
-        (void) stack;
-        (void) line_number;
+	(void) stack;
+	(void) line_number;
 }
