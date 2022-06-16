@@ -28,7 +28,7 @@ int is_number(char *s)
 }
 
 /**
- * get_tokens - get tokens from line
+ * get_token - get tokens from line
  * @line: line from file
  * @line_number: line number
  *
