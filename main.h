@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MONTY_H
+#define MONTY_H
 
 #define  _POSIX_C_SOURCE 200809L
 #include <stdio.h>
@@ -13,6 +13,7 @@
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE 1
 extern int global_var;
+int global_var;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
