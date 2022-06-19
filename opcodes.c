@@ -117,13 +117,14 @@ void get_func(char *op, stack_t **stack, unsigned int line_number)
 		{"div", divi},
 		{"mul", mul},
 		{"mod", modd},
-		{"#", comm},
 		{NULL, NULL}
 	};
 	int index = 0;
 
 	while (find_op[index].opcode != NULL)
 	{
+		if (opcode[0] == "#")
+			return;
 		if (strcmp(find_op[index].opcode, op) == 0)
 		{
 			find_op[index].f(stack, line_number);

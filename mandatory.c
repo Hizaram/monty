@@ -66,14 +66,3 @@ void modd(stack_t **stack, unsigned int line_number)
 
 	pop(stack, line_number);
 }
-
-/**
- * comm - implement the comments handling
- * @stack: stack
- * @line_number: line number
- */
-void comm(stack_t **stack, unsigned int line_number)
-{
-	(void) stack;
-	(void) line_number;
-}
