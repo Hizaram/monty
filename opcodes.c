@@ -121,10 +121,10 @@ void get_func(char *op, stack_t **stack, unsigned int line_number)
 	};
 	int index = 0;
 
+	if (op[0] == '#')
+		return;
 	while (find_op[index].opcode != NULL)
 	{
-		if (opcode[0] == "#")
-			return;
 		if (strcmp(find_op[index].opcode, op) == 0)
 		{
 			find_op[index].f(stack, line_number);
