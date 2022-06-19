@@ -129,11 +129,6 @@ void get_func(char *op, stack_t **stack, unsigned int line_number)
 			find_op[index].f(stack, line_number);
 			return;
 		}
-		elif (strcmp(find_op[11].opcode, op[0]) == 0)
-		{
-			find_op[11].f(stack, line_number);
-			return;
-		}
 		index++;
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op);
